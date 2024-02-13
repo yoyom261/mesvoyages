@@ -22,7 +22,7 @@ class VisiteFixture extends Fixture
                     ->setTempmin($faker->numberBetween(-20, 10))
                     ->setTempmax($faker->numberBetween(10, 40))
                     ->setNote($faker->numberBetween(0, 20))
-                    ->setAvis($faker->sentence(4, true));
+                    ->setAvis($faker->sentences(4, true));
              //enregistrement de l'objet
              $manager->persist($visite);
         }
