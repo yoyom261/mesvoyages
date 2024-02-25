@@ -1,4 +1,4 @@
-{% extends "baseadmin.html.twig" %}
+
 
 {% block body %}
     <h2>Détail visite :</h2>
@@ -21,6 +21,7 @@
                 </div>
                 {{ form_row(formvisite.ville) }}
                 {{ form_row(formvisite.pays) }}
+                {{ form_row(formvisite.environnements) }}
             </div>
             <div class="col">
                 <!-- emplacement image -->
