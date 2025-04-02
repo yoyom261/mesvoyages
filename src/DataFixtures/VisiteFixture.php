@@ -8,6 +8,7 @@ use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
 
 
+
 class VisiteFixture extends Fixture
 {
     public function load(ObjectManager $manager):void
