@@ -60,7 +60,7 @@ class VisiteRepository extends ServiceEntityRepository
     }
     
     /**
-     * enregistrement dont un champ est éégale a une valeur 
+     * enregistrement dont un champ est égale a une valeur 
      * ou tous les enregistrement si la valeur est vide
      * @param type $champ
      * @param type $valeur 
@@ -81,4 +81,22 @@ class VisiteRepository extends ServiceEntityRepository
                     ->getResult();
         }
     }
+    
+    public function add(Visite $entity, bool $flush = false): void {
+        $this->_em->persist($entity);
+
+        if ($flush) {
+            $this->_em->flush();
+        }
+    }
+    
+    public function remove(Visite $entity, bool $flush = false): void{
+        $this->_em->remove($entity);
+
+        if ($flush) {
+            $this->_em->flush();
+        }
+    }
+
+
 }
